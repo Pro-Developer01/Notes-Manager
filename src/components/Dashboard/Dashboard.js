@@ -5,6 +5,8 @@ import CreateNote from '../Pages/CreateNote.js'
 export default function Dashboard() {
     const [CreateNte, setCreateNte] = useState(true);
     const [AllNote, setAllNote] = useState(false);
+    const[GetData,setGetData]=useState();
+
     return (
         <div className='container d-flex-column justify-content-center'>
             <div className="btn-group d-flex justify-content-center my-4" style={{width: '100%'}}>
@@ -16,7 +18,7 @@ export default function Dashboard() {
             </div>
             <hr />
             <div className="results d-flex justify-content-center">
-                {CreateNte && <CreateNote />}
+                {CreateNte && <CreateNote setGetData={setGetData}/>}
                 {AllNote && <AllNotes />}
             </div>
         </div>
