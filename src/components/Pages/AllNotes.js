@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 import DeleteIcon from '@mui/icons-material/Delete';
+import './Pages.css';
 
 
 const getLocalData = () => {
@@ -27,10 +28,11 @@ export default function AllNotes({ setIndexUpdate }) {
             if (id !== Ind) {
                 return element;
             }
+            else{return null;}
         })
 
         setdata(newData);
-        console.log('chal raha h', newData);
+        localStorage.setItem('Notes', JSON.stringify(newData));
     }
 
     const searchHandler=(e)=>{
@@ -45,7 +47,7 @@ export default function AllNotes({ setIndexUpdate }) {
     console.log('data zero', data[Index]);
     return (
 
-        <div style={{
+        <div className='Media' style={{
             height: '74vh',
             background: '#f9f0f0bd',
             overflow: 'auto',
@@ -70,7 +72,7 @@ export default function AllNotes({ setIndexUpdate }) {
                                 {/* <small>And some small print.</small> */}
                             </button>
                             <div className="icon" style={{
-                                position: 'relative', marginLeft: '230px',
+                                position: 'relative', marginLeft: '92%',
                                 marginTop: '-27px',
                                 zIndex: '99'
                             }} onClick={() => deleteHandler(i)}>

@@ -7,6 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 import UpdatePage from './components/Pages/UpdatePage.js';
+import Footer from './components/Footer/Footer.js';
 
 export default function App() {
   const [IndexUpdate,setIndexUpdate]=useState();
@@ -20,6 +21,7 @@ export default function App() {
         <Route path='/update' element={<UpdatePage IndexUpdate={IndexUpdate}/>}/>
       
       </Routes>
+      <Footer/>
       </BrowserRouter>
     </div>
   )

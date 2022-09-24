@@ -34,7 +34,7 @@ export default function CreateNote() {
     localStorage.setItem('Notes',JSON.stringify(Notes));
   },[Notes])
   return (
-    <div style={{ width: '33%' }}>
+    <div className='Media'  style={{ width: '33%' }}>
       <form onSubmit={submitHandler}>
         <div className="mb-3">
           <label for="exampleFormControlInput1" className="form-label">Author Name</label>

@@ -54,9 +54,14 @@ export default function UpdatePage(props) {
       </div>
       <hr />
     </div>
-    <div className='container d-flex justify-content-center' style={{ padding: ' 50px 0px' }}>      
-      <div style={{ width: '33%' }}>
-        <form onSubmit={submitHandler}>
+    <div className='container d-flex justify-content-center' style={{ padding: ' 0px 0px' }}>      
+      <div className='Media'  style={{width: '49%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center', }}>
+        <h2>Update Your Notes</h2>
+        <form style={{    width: '100%'}} onSubmit={submitHandler}>
           <div className="mb-3">
             <label for="exampleFormControlInput1" className="form-label">Author Name</label>
             <input type="text" className="form-control" id="exampleFormControlInput1" value={Author} onChange={(e) => setAuthor(e.target.value)} placeholder="Binod" />
