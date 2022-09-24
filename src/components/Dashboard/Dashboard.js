@@ -2,10 +2,9 @@ import React, { useState } from 'react'
 import AllNotes from '../Pages/AllNotes.js'
 import CreateNote from '../Pages/CreateNote.js'
 
-export default function Dashboard() {
+export default function Dashboard({setIndexUpdate}) {
     const [CreateNte, setCreateNte] = useState(true);
     const [AllNote, setAllNote] = useState(false);
-    const[GetData,setGetData]=useState();
 
     return (
         <div className='container d-flex-column justify-content-center'>
@@ -18,8 +17,8 @@ export default function Dashboard() {
             </div>
             <hr />
             <div className="results d-flex justify-content-center">
-                {CreateNte && <CreateNote setGetData={setGetData}/>}
-                {AllNote && <AllNotes />}
+                {CreateNte && <CreateNote />}
+                {AllNote && <AllNotes setIndexUpdate={setIndexUpdate} />}
             </div>
         </div>
     )

@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import {Link  } from "react-router-dom";
+
 
 const getLocalData=()=>{
     const InitialData= localStorage.getItem('Notes');
-    console.log('InitialData',InitialData);
     if(InitialData){
      return JSON.parse(InitialData);
     }
@@ -11,10 +12,15 @@ const getLocalData=()=>{
     }
   }
 
-export default function AllNotes({setGetData}) {
-    const[Index,setIndex]=useState();
+export default function AllNotes({setIndexUpdate}) {
+    const[Index,setIndex]=useState(0);
     const[data,setdata]=useState(getLocalData());
+    useEffect(()=>{
+        setIndexUpdate(Index);
+    },[Index,setIndexUpdate])
     console.log('index',Index);
+    console.log('data',data);
+    console.log('data zero',data[Index]);
     return (
         <div style={{
             height: '74vh',
@@ -24,10 +30,10 @@ export default function AllNotes({setGetData}) {
 
         }}>
             <div className="list-group">
-                {data.map((e)=>{
+                {data.map((e,i)=>{
                     return(
                         <>
-                        <button href="/" className="list-group-item list-group-item-action " data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={()=>setIndex(e)} aria-current="true">
+                        <button href="/" className="list-group-item list-group-item-action " data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={()=>setIndex(i)} aria-current="true">
                 <div className="d-flex w-100 justify-content-between" >
                         <h5 className="mb-1">{e.Author}</h5>
                         {/* <small>3 days ago</small> */}
@@ -47,15 +53,15 @@ export default function AllNotes({setGetData}) {
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">{Index?Index.Author:null}</h5>
+                            <h5 className="modal-title" id="exampleModalLabel">{data?data[Index].Author:null}</h5>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
-                        {Index?Index.NotePara:null}
+                        {data?data[Index].NotePara:null}
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary">Update Note</button>
+                            <Link to={'/update'}><button type="button" className="btn btn-primary" data-bs-dismiss="modal" >Update Note</button></Link>
                         </div>
                     </div>
                 </div>
