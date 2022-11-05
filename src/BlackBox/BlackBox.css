@@ -1,0 +1,158 @@
+.parentContainer {
+    display: flex;
+    /* font-family: 'Gilroy-Bold'; */
+    flex-flow: column;
+    background-color: #3f3f3f;
+    padding: 35px;
+    justify-content: center;
+    /* align-items: center; */
+    border-radius: 7px;
+    color: white;
+    width: 333px;
+    height: 187px;
+  }
+  .HeaderDiv {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin: 3px 0;
+  }
+  .HeaderDiv span{
+    font-size: 16px;
+    /* font-family: 'Gilroy-Bold'; */
+    font-weight: 700;
+  }
+  .HeaderDiv select{
+    background: transparent;
+    color: white;
+    border: solid;
+    /* outline: none; */
+    /* border-bottom: 14px white !important; */
+    font-size: 14px;
+    font-weight: 600;
+    border: 0;
+
+  
+  }
+  .selectLine
+  {
+    background-color: white;
+    height: 2px;
+    width: 78px;
+    position: absolute;
+    top: 65px;
+    left: 215px;
+    border-radius: 10px;
+  }
+  .SarDiv {
+    display: flex;
+    margin-top: 22px;
+    margin-bottom: 19px;
+  }
+  .sar2
+  {
+    font-size: 30px;
+      margin-left: 11px;
+      margin-top: -16px;
+  }
+  .sar1{
+    font-size: 16px;
+  }
+  .progressDiv
+  {
+    display: flex;
+    flex-flow: row;
+  }
+  .food
+  {
+    /* width: 88px; */
+    height: 8px;
+    /* left: 36px;
+    top: 191px; */
+    background: #FFB800;
+    border-radius: 20px 0px 0px 20px;
+  }
+  .Shopping
+  {
+    
+    width: 159px;
+    height: 8px;
+    /* left: 136px; */
+    /* top: 191px; */
+    background: #1BA493;
+
+  }
+  .Movies
+  {
+    width: 20px;
+    height: 8px;
+    /* left: 295px; */
+    /* top: 191px; */
+    background: #E44816;
+    border-radius: 0px 20px 20px 0px;
+
+  }
+  .ItemsDiv
+  {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+
+  }
+  .item1
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45px;
+  }
+  .item1 div{
+    background: #FFB800;
+    /* padding: 3px; */
+    width: 10px;
+    height: 10px;
+    border-radius: 39px;
+  }
+  .item1 span{
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .item2
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 67px;
+    margin-left: 15px;  
+  }
+  .item2 div{
+    background: #1BA493;
+    /* padding: 3px; */
+    width: 10px;
+    height: 10px;
+    border-radius: 39px;
+  }
+  .item2 span{
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .item3
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 53px;
+    margin-left: 15px;  
+
+  }
+  .item3 div{
+    background: #E44816;
+    /* padding: 3px; */
+    width: 10px;
+    height: 10px;
+    border-radius: 39px;
+  }
+  .item3 span{
+    font-weight: 400;
+    font-size: 12px;
+  }
