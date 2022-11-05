@@ -3,10 +3,11 @@ import './BlackBox.css';
 // import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 // import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 // import { useState } from 'react';
+
 const list={
-    FoodValue: 33,
-    ShoppingValue: 33,
-    MoviesValue: 20,
+    FoodValue: 10,
+    ShoppingValue: 40,
+    MoviesValue: 33,
     }
 
 
