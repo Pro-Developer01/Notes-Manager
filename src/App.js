@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import UpdatePage from './components/Pages/UpdatePage.js';
 import Footer from './components/Footer/Footer.js';
+import BlackBox from './BlackBox/BlackBox.js';
 
 export default function App() {
   const [IndexUpdate,setIndexUpdate]=useState();
@@ -15,13 +16,14 @@ export default function App() {
   return (
     <div>
       <BrowserRouter>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Routes>
-        <Route path='/' element={<Dashboard setIndexUpdate={setIndexUpdate} />}/>
-        <Route path='/update' element={<UpdatePage IndexUpdate={IndexUpdate}/>}/>
+        <Route path='/' element={<BlackBox/> }/>
+        {/* <Route path='/' element={<Dashboard setIndexUpdate={setIndexUpdate} />}/>
+        <Route path='/update' element={<UpdatePage IndexUpdate={IndexUpdate}/>}/> */}
       
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
       </BrowserRouter>
     </div>
   )
